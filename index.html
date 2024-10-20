@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 600px;
+        }
+        input, button {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Budget Calculator</h1>
+    <form id="budgetForm">
+        <label for="income">Monthly Income:</label>
+        <input type="number" id="income" name="income" required>
+
+        <label for="amountOfBills">Number of Bills:</label>
+        <input type="number" id="amountOfBills" name="amountOfBills" required>
+
+        <div id="billInputs"></div>
+        <button type="button" onclick="addBillInput()">Add Bill</button>
+
+        <label for="amountOfMisc">Number of Miscellaneous Costs:</label>
+        <input type="number" id="amountOfMisc" name="amountOfMisc" required>
+
+        <div id="miscInputs"></div>
+        <button type="button" onclick="addMiscInput()">Add Miscellaneous Cost</button>
+
+        <button type="submit">Calculate Budget</button>
+    </form>
+
+    <h2>Result:</h2>
+    <pre id="result"></pre>
+
+    <script>
+        function addBillInput() {
+            const billInputs = doc
